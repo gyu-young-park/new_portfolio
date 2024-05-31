@@ -23,10 +23,10 @@ const Hero = () => {
           </h2>
           <TextGenerateEffect 
             className='text-center text-[40px] md:text-5xl lg:text-6xl' 
-            words='Transforming Concepts into Seamless User Experiences'
+            words='A passionate developer who loves exploring new technologies and is committed to continuous learning and growth'
           />
           <p className='text-center md:tracking-wider mb-4 text-sm md:test-lg lg:text-2xl'>
-            Hi, I&apos;m gyu, Backend Developer based in Samsung
+            Hi, I&apos;m gyu, Software Developer from Samsung!
           </p>
           <a href="#about">
             <MagicButton 

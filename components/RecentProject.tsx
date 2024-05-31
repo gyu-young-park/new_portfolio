@@ -23,7 +23,7 @@ const RecentProject = () => {
                         <h1 className='font-bold lg:text-2xl md:text-xl text-base line-clamp-1'>
                             {title}
                         </h1>
-                        <p className='lg:text-xl lg:font-normal font-light text-sm line-clamp-2'>
+                        <p className='lg:text-xl lg:font-normal font-light text-sm line-clamp-3'>
                             {des}
                         </p>
                         <div className="flex items-center justify-center mt-7 mb-3">
