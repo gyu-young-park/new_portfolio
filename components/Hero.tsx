@@ -26,7 +26,7 @@ const Hero = () => {
             words='Transforming Concepts into Seamless User Experiences'
           />
           <p className='text-center md:tracking-wider mb-4 text-sm md:test-lg lg:text-2xl'>
-            Hi, I'm gyu, Backend Developer based in Samsung
+            Hi, I&apos;m gyu, Backend Developer based in Samsung
           </p>
           <a href="#about">
             <MagicButton 
