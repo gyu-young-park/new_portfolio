@@ -14,7 +14,7 @@ export function Projects() {
             <span className='text-purple'>Projects Details</span>
         </h1>
         {projectDetailList.map((projectDetail) => (
-          <div className="py-10 md:w-[800px] w-[95vw] gap-10" id={projectDetail.id}>
+          <div key={projectDetail.id} className="py-10 md:w-[800px] w-[95vw] gap-10" id={projectDetail.id}>
             <BackgroundGradient className="rounded-[22px] py-6 px-8 sm:p-10 bg-white dark:bg-zinc-900">
               <div className="pb-1 flex flex-col items-center justity-center">
                 <img
@@ -29,8 +29,8 @@ export function Projects() {
                 words={projectDetail.title}
               />
 
-              {projectDetail.descriptions.map((descriptions) => (
-                <div className="flex flex-col gap-3 p-5">
+              {projectDetail.descriptions.map((descriptions, i) => (
+                <div className="flex flex-col gap-3 p-5" key={i}>
                   <p className="text-lg text-neutral-300 dark:text-neutral-300">
                     {descriptions.subTitle}
                   </p>
@@ -40,10 +40,10 @@ export function Projects() {
                   
                   {
                     <div className="ml-3">
-                      {descriptions.description.split('\n').map((line, i) => (
+                      {descriptions.description.split('\n').map((line, j) => (
                         <p
                         className="mb-0.5 text-xm text-neutral-600 dark:text-neutral-400" 
-                          key={i}> {line.trim() !== "" ? '◦' : ""} {line}
+                          key={j}> {line.trim() !== "" ? '◦' : ""} {line}
                         </p>
                       ))}
                     </div>
@@ -58,7 +58,7 @@ export function Projects() {
                 <div className="flex items-center justify-center mt-7 mb-3">
                       <div className='flex items-center'>
                           {descriptions.iconLists.map((icon, index) => (
-                              <div key={icon} className="border border-white/[0.2] rounded-full 
+                              <div key={index} className="border border-white/[0.2] rounded-full 
                                       bg-black lg:w-10 lg:h-10 w-8 h-8
                                       flex justify-center items-center"
                                       style={{transform: `translateX(-${5 * index * 2}px)`
