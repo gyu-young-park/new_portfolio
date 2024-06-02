@@ -12,9 +12,9 @@ export default function Approach() {
         </h1>
         <div className="py-20 flex flex-col lg:flex-row items-center justify-center gap-4">
             <Card 
-                title="Planning & Strategy" 
-                icon={<AceternityIcon order="phase1"/>}
-                description="wwwwwwwwwwwwwwwwwwwwwwww"    
+                title="Career" 
+                icon={<AceternityIcon order="Career"/>}
+                description={`[2017~2021] 한국항공대 소프트웨어학과 졸업(4.24 수석) \n [2020] 노보네트웍스 SW인턴 \n [2020] 삼성전자 네트워크 사업부 SW 인턴 \n [2021~현재] 삼성전자 네트워크 사업부 SW Engineer` }    
             >
             <CanvasRevealEffect
                 animationSpeed={5.1}
@@ -22,9 +22,9 @@ export default function Approach() {
             />
             </Card>
             <Card 
-                title="Nisha is Munni" 
-                icon={<AceternityIcon order="phase2"/>}
-                description="wwwwwwwwwwwwwwwwwwwwwwww"
+                title="Awards and Ceritificate" 
+                icon={<AceternityIcon order="Awards and Ceritificate"/>}
+                description={`[2017]국가 이공계 우수장학생 \n [2019]교내 4차 산업 SW경시 대회 금상 \n [2019] 경인 지역 알고리즘 대회 본선 진출 \n [2019] 교내 SW개발 대회 금상 \n [2020] 교내 SW개발 대회 금상 \n [2020~2021] 구글 머신러닝 부트캠프 수료 \n [2021] Tensorflow Certificate 취득 \n [2021] 캡스톤 대회 1등 \n [2021] 한화생명 블록체인 해커톤 최종 본선 진출`}
             >
             <CanvasRevealEffect
                 animationSpeed={3}
@@ -37,9 +37,12 @@ export default function Approach() {
             />
             </Card>
             <Card 
-                title="Munni is Aditi" 
-                icon={<AceternityIcon order="phase3" />}
-                description="wwwwwwwwwwwwwwwwwwwwwwww"
+                title="Tech stack" 
+                icon={<AceternityIcon order="Stack" />}
+                description={`[프로그래밍 언어] Golang, Python, C/C++, Java \n [프론트엔드] JavaScript, TypeScript, React, Nextjs \n [백엔드] Golang, FastAPI, Flask, Spring, Nodejs 
+                          \n [모바일] Android(Java) \n [DB] PostgreSQL, Redis 
+                          \n [클라우드]Docker, Kubernetes, AWS, [Platform]Linux, Shell, EFK, OpenTelemetry, eBPF
+                          \n [커뮤니케이션] 영어`}
             >
             <CanvasRevealEffect
                 animationSpeed={3}
@@ -95,7 +98,12 @@ const Card = ({
           {title}
         </h2>
         <h2 className="text-sm dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center" color={"ef4ecff"}>
-          {description}
+        {description.split('\n').map((line, j) => (
+                <p
+                className="mb-2 text-xm text-start" 
+                  key={j}> {line}
+                </p>
+              ))}
         </h2>
       </div>
     </div>

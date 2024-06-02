@@ -18,7 +18,7 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "Collaborating in others!",
+    title: "I'm working with global collgues!!",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -97,7 +97,7 @@ export const projects = [
   {
     id: 4,
     title: "Platform Engineering",
-    des: "Platform 고도화 작업으로 ELK 구축, OpenTelemetry 도입, 해외연구소와 Test 자동화 협업 등을 하였습니다.",
+    des: "Platform 고도화 작업으로 EFK 구축, OpenTelemetry 도입, 해외연구소와 Test 자동화 협업 등을 하였습니다.",
     img: "/platform.svg",
     iconLists: ["go.png","fluentd.png","es.png","java.png","opentelemetry.png"],
     link: "#platform",
