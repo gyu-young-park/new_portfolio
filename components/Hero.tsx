@@ -19,18 +19,18 @@ const Hero = () => {
       <div className='flex justify-center relative my-20 z-10'>
         <div className='max-w-[80vw] mdLmax-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
           <h2 className='uppercase tacking-widest text-xs text-center text-blue-100 max-w-80'>
-            Dynamic Web Magic with Nextjs
+            Hello my portfolio!
           </h2>
           <TextGenerateEffect 
             className='text-center text-[40px] md:text-5xl lg:text-6xl' 
-            words='A passionate developer who loves exploring new technologies and is committed to continuous learning and growth'
+            words='Passionate in swimming new technolgies and software'
           />
           <p className='text-center md:tracking-wider mb-4 text-sm md:test-lg lg:text-2xl'>
-            Hi, I&apos;m gyu, Software Developer from Samsung!
+            Hi, I&apos;m gyu, Software Developer at Samsung Network Team!
           </p>
           <a href="#about">
             <MagicButton 
-              title="Show my work"
+              title="Explore me!"
               position='right'
               icon={<FaLocationArrow/>}/>
           </a>

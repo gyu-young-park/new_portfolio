@@ -1,45 +1,67 @@
 import Image from "next/image";
 import { BackgroundGradient } from "./ui/BackgroundGradient";
+import { projectDetailList } from "@/data";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { MdSubtitles } from "react-icons/md";
 
 export function Projects() {
   return (
-    <div className='py-10' id="project-detail">
+
+    <div className='py-10 flex flex-col justify-center items-center' id="project-detail">
         <h1 className="heading">
             My Software Major {' '}
             <span className='text-purple'>Projects Details</span>
         </h1>
-        <div className="py-10 flex flex-col gap-10 items-center">
-          <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
-            <div className="flex flex-col">
-              <img
-                src={`/ric.svg`}
-                alt="jordans"
-                className="object-contain h-[300px]"
-              />
-            </div>
-            <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
-              Air Jordan 4 Retro Reimagined
-            </p>
-    
-            <p className="text-xm text-neutral-600 dark:text-neutral-400">
-              The Air Jordan 4 Retro Reimagined Bred will release on Saturday,
-              February 17, 2024. Your best opportunity to get these right now is by
-              entering raffles and waiting for the official releases.
-              The Air Jordan 4 Retro Reimagined Bred will release on Saturday,
-              February 17, 2024. Your best opportunity to get these right now is by
-              entering raffles and waiting for the official releases.
-            </p>
-            <div className="flex flex-row">
-              <div className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-sl font-bold dark:bg-zinc-800">
-                <span>Duration </span>
-                <span className="bg-zinc-700 rounded-full text-[0.9rem] px-2 py-0 text-white">
-                  2022.12~2024.5
-                </span>
+        {projectDetailList.map((projectDetail) => (
+          <div className="py-10 md:w-[800px] w-[95vw] gap-10">
+            <BackgroundGradient className="rounded-[22px] py-6 px-8 sm:p-10 bg-white dark:bg-zinc-900">
+              <div className="pb-1 flex flex-col items-center justity-center">
+                <img
+                  src={projectDetail.img}
+                  alt="jordans"
+                  className="border-2 rounded-xl border-gray-500  object-contain w-[300px] h-[300px]"
+                />
               </div>
-            </div>
-          </BackgroundGradient>
+              
+              <TextGenerateEffect
+                className='text-center text-[40px] md:text-5xl lg:text-6xl' 
+                words={projectDetail.title}
+              />
 
-        </div>
+              {projectDetail.descriptions.map((descriptions) => (
+                <div className="flex flex-col gap-3 p-5">
+                  <p className="text-lg text-neutral-300 dark:text-neutral-300">
+                    {descriptions.subTitle}
+                  </p>
+                  <p className=" text-xm text-neutral-500 dark:text-neutral-330">
+                    → {descriptions.introduction}
+                  </p>
+                  {
+                    <div className="ml-3">
+                      {descriptions.description.split('\n').map((line, i) => (
+                        <p
+                        className="mb-0.5 text-xm text-neutral-600 dark:text-neutral-400" 
+                          key={i}> {line.trim() !== "" ? '◦' : ""} {line}
+                        </p>
+                      ))}
+                    </div>
+                  }
+                  <div className="flex flex-row">
+                <div className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-sl font-bold dark:bg-zinc-800">
+                  <span>Duration </span>
+                  <span className="bg-zinc-700 rounded-full text-[0.9rem] px-2 py-0 text-white">
+                    {projectDetail.duration}
+                  </span>
+                </div>
+              </div>
+                </div>
+                
+              ))}
+              
+            </BackgroundGradient>
+          </div>
+        ))}
+
     </div>
     
   );
