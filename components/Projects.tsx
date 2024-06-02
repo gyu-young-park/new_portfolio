@@ -52,14 +52,14 @@ export function Projects() {
                 <div className="h-fit rounded-full sm:pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-sl font-bold dark:bg-zinc-800">
                   <span>Duration </span>
                   <span className="bg-zinc-700 rounded-full  px-2 py-0 text-white">
-                    {projectDetail.duration}
+                    {descriptions.duration}
                   </span>
                 </div>
                 <div className="flex items-center justify-center sm:mt-7 sm:mb-3">
                       <div className='flex items-center'>
                           {descriptions.iconLists.map((icon, index) => (
                               <div key={index} className="border border-white/[0.2] rounded-full 
-                                      bg-black lg:w-10 lg:h-10 w-10 h-10
+                                      bg-black lg:w-12 lg:h-12 w-10 h-10
                                       flex justify-center items-center"
                                       style={{transform: `translateX(-${5 * index * 2}px)`
                                   }}>

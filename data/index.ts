@@ -257,15 +257,7 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-  },
-  {
-    id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
-    img: "/link.svg",
-  },
+  }
 ];
 
 export const projectDetailList = [
@@ -278,43 +270,28 @@ export const projectDetailList = [
       {
         subTitle: "1. Kubernetes cluster resource 유지, 보수",
         introduction: "Near-RT RIC cluster관리를 위한 helm chart, shell script 추가 및 수정이 필요 ",
-        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
+        iconLists: ["linux.png","docker-mark-blue.png", "kube.png", "helm.svg"],
         description: `xApp build shell script 작성 \n
           helm chart, value 수정 및 추가 \n
-          각종 OS에서 발생하는 kubernetes error 보완 및 수정 \n`, 
+          각종 OS에서 발생하는 kubernetes error 보완 및 수정 \n`,
+          duration: "2022.7~2024.6"
       },
       {
         subTitle: "2. Near-RT RIC cluster pod 유지보수",
         introduction: "Near-RT RIC는 대규모 데이터 처리를 위한 분산 처리시스템으로, 여러 개의 component들을 통해서 event driven하게 실시간 data를 처리",
-        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
-        description: "golang으로 이루어진 Near-RT RIC cluster주요 pod 디버깅 및 기능 개발(appmgr, submgr, e2mgr, rtmgr)", 
+        iconLists: ["go.png", "py.png", "c++.png", "kube.png"],
+        description: "golang으로 이루어진 Near-RT RIC cluster주요 pod 디버깅 및 기능 개발(appmgr, submgr, e2mgr, rtmgr)",
+        duration: "2022.7~2024.6"
       },
       {
         subTitle: "3. cluster 고도화를 위한 APIPorxy, ricctl 개발",
         introduction: "",
-        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
-        description: `- python의 fastapi 기반의 APIProxy는 cluster내부의 API 호출 및 디버깅, reconcilate기능 제공(kubernetes-api-server와 유사) \n
-        - ricctl은 golang기반으로 만들어진 cli로 cluster내의 api호출, 디버깅을 위한 기능을 제공 (kubectl과 유사)`, 
-      },
-      {
-        subTitle: "4. Kong Ingress Controller",
-        introduction: "",
-        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
-        description: `외부로 traffic을 흘려보내는 kong ingress controller 유지, 보수 \n
-          platform 고도화를 위한 OAuth2 plugin, http2, IPv6도입 \n
-          EKS형상에서의 IPv6 Opensource bug fix 및 golang custom `, 
-      },
-      {
-        subTitle: "5. logging platform 고도화를 위한 EFK(Elasticsearch + Fluentd + Kibana) 도입",
-        introduction: "Near-RT RIC는 대규모 데이터 처리를 위한 분산 처리시스템으로, 여러 개의 component들을 통해서 event driven하게 실시간 data를 처리",
-        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
-        description: `logging 관리를 위한 EFK 스터디 자료 준비 및 도입 \n
-          fluented를 통한 각 pod의 비표준 log, data formatting, filltering 구현 \n
-          data retention policy 도입 \n
-          Java SDK를 통한 RIC cluster, xApp error 검출 App개발`, 
-      },
+        iconLists: ["go.png", "py.png","docker-mark-blue.png", "kube.png", "redis2.png"],
+        description: `python의 Fastapi 기반의 APIProxy는 cluster내부의 API 호출 및 디버깅, reconcilate기능 제공(kubernetes-api-server와 유사) \n
+        ricctl은 golang기반으로 만들어진 cli로 cluster내의 api호출, 디버깅을 위한 기능을 제공 (kubectl과 유사)`,
+        duration: "2023.7~2023.11"
+      }
     ],
-    duration: "2022.12~2024.5"
   },
   {
     id: "a1m",
@@ -324,23 +301,24 @@ export const projectDetailList = [
       {
         subTitle: "1. A1Mediator 개발 및 유지 보수",
         introduction: "python flask기반의 server로 Near-RT RIC cluster에서 pod로 deploy되며, Non-RT RIC의 policy와 xApp사이의 policy 정합성을 관리해주는 server",
-        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
+        iconLists: ["py.png", "kube.png", "redis2.png"],
         description: `Opensource기반 A1Mediator project 인수인계 \n
           A1 interface feature에 맞게 code 수정 \n
           A1Mediator에 RMR(socket 통신 모듈) 연동 및 A1Mediator와의 RMR통신을 위한 xApp framework A1mediator 통신 부분 구현 \n
           A1TP(TLS, OAuth2, JWT token) spec 구현 \n
-          opensource error 수정 및, RMR을 통한 xApp과 연동, REST를 통한 Non-RT RIC와의 연동 성공` 
+          opensource error 수정 및, RMR을 통한 xApp과 연동, REST를 통한 Non-RT RIC와의 연동 성공`,
+        duration: "2023.3~2024.6"
       },
       {
         subTitle: "2. A1Migration 개발",
         introduction: "A1Mediator 관리 및 spec에는 없는 추가 기능 구현을 위한 별도의 pod",
-        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
+        iconLists: ["py.png", "kube.png", "redis2.png"],
         description: `A1Mediator 관리 및 spec에는 없는 추가 기능 구현을 위한 별도의 pod \n
         python thread기반으로 A1mediator의 초기 policy 정보 update 및 policy 통계 정보 생성 기능 개발 \n
         policy 통계 정보를 EMS server로 제공하는 기능 개발`, 
+        duration: "2024.3~2024.6"
       },
     ],
-    duration: "2022.12~2024.5"
   },
   {
     id: "xapp",
@@ -350,21 +328,58 @@ export const projectDetailList = [
       {
         subTitle: "1. golang기반의 e2node-config xApp개발",
         introduction: "F1AP spec을 따르는 msg를 받고, 파싱하여 slice xApp에 필요한 data를 전달해줄 수 있는 xApp이 필요",
-        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
+        iconLists: ["go.png","kube.png", "redis2.png"],
         description: `f1ap spec 구현 및 원하는 data extract할 수 있는 기능 개발 \n
           RMR(socket)기반의 통신과 redis기반의 통신 및 data처리 기능 개발 \n
           test code coverage 100% 및 e2e test를 위한 e2sim 연동 \n
           이후 xApp들이 고도화됨에 따라 e2node-config golang library로 수정 및 업데이트`,
+        duration: "2022.8~2023.5"
       },
       {
         subTitle: "2. golang 기반의 xApp-benchmarker 개발",
         introduction: "xApp은 현장에서 대용량, 대규모 데이터를 실시간(1ms 이하) 처리해야하므로 성능 테스트가 중요",
-        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
+        iconLists: ["go.png","kube.png", "redis2.png"],
         description: `초당 몇 건의 msg와 정해진 기간동안 받은 msg용량의 총합, msg parsing에 걸린 시간 등에 대한 통계 제공 \n
           redis stream을 통한 실시간 모니터링 data 제공`,
+        duration: "2022.11~2023.1"
       },
     ],
-    duration: "2022.12~2024.5"
+  },
+  {
+    id: "platform",
+    img: "/pe.webp",
+    title: "Platform Engineering",
+    descriptions: [
+      {
+        subTitle: "1. Kong Ingress Controller",
+        introduction: "",
+        iconLists: ["go.png", "kube.png"],
+        description: `외부로 traffic을 흘려보내는 kong ingress controller 유지, 보수 \n
+          platform 고도화를 위한 OAuth2 plugin, http2, IPv6도입 \n
+          EKS형상에서의 IPv6 Opensource bug fix 및 golang custom `,
+        duration: "2023.5~2024.5"
+      },
+      {
+        subTitle: "2. logging platform 고도화를 위한 EFK(Elasticsearch + Fluentd + Kibana) 도입",
+        introduction: "Near-RT RIC는 Event-Driven기반의 대규모 데이터 분산 처리시스템으로 로깅 추적과 정형화 필터링이 어려움",
+        iconLists: ["linux.png","java.png", "es.png", "kube.png"],
+        description: `logging 관리를 위한 EFK 스터디 자료 준비 및 도입 \n
+          fluented를 통한 각 pod의 비표준 log, data formatting, filltering 구현 \n
+          data retention policy 도입 \n
+          Java SDK를 통한 RIC cluster, xApp error 검출 App개발`,
+         duration: "2023.11~2024.2"
+      },
+      {
+        subTitle: "3. OpenTelemetry 도입 PoC",
+        introduction: "비동기 분산 처리 시스템인 Near-RT RIC에서 logic상의 문제가 발생하였을 때 request의 흐름을 추적하기 어려움",
+        iconLists: ["linux.png","go.png", "py.png", "opentelemetry.png"],
+        description: `Kubernetes환경에서 OpenTelemetry 배포를 위한 resource 준비 및 자동화 배포 script 개발 \n
+          HTTP기반의 분산 추적을 위한 golang, python span주입 개발 \n
+          시각화를 위한 jeager 도입 및 자동화 script 개발 \n
+          RMR(socket 통신)을 지원하지 못하고 과제가 drop되어 개발 중단`,
+         duration: "2024.3~2024.6"
+      },
+    ],
   },
   {
     id: "fdm",
@@ -374,14 +389,57 @@ export const projectDetailList = [
       {
         subTitle: "1. FPGA Controller",
         introduction: "linux c/c++기반의 임베디드 server로 FPGA register data를 동적으로 관리해줍니다. 또한, 전체 System board의 초기 생명주기를 관리하여 init단계에 필요한 config를 LTE,NR에 따라 적절하게 설정해주는 process입니다.",
-        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
+        iconLists: ["linux.png","c++.png","docker-mark-blue.png"],
         description: `사업자의 요청에 따른 초기 FPGA data 설정 \n
           운용자의 실시간 config값 변경에 따른 cell정보 yang database 업데이트 기능 개발 \n
           부서 간 협의를 통해 socket 통신으로 event-driven programming 구현 \n
           실시간 고속처리를 위한 pthread기반의 동시성 프로그래밍 구현  \n
           Test coverage 60% -> 90% 향상, 사내 Code 품질 지표 향상을 위한 sw활동, 활발한 Code review 활동을 통한 개발 문화관련 수상`,
+          duration: "2021.1~2022.7"
       },
     ],
-    duration: "2022.12~2024.5"
+  },
+  {
+    id: "core",
+    img: "/automater.webp",
+    title: "자동화 TC 생성 Tool",
+    descriptions: [
+      {
+        subTitle: "1. Core망 Test 자동화 Tool",
+        introduction: "LTE/NR Core망을 설정값이 올바른 지 정합성을 검사하기 위한 자동화 Tool제작",
+        iconLists: ["linux.png", "py.png"],
+        description: `Core망에 사용되는 network config 파싱 python 엔진 개발 \n 파싱 결과에 따른 모든 경우의 수를 도출 및 TC 자동 생성 \n 자동 생성된 TC를 통해 설정한 config의 정합성 검토 기능 개발`,
+        duration: "2020.7~2020.8"
+      },
+      {
+        subTitle: "2. GUI Desktop App",
+        introduction: "LTE/NR Core망을 설정값이 올바른 지 정합성을 검사하기 위한 자동화 Tool제작",
+        iconLists: ["js.png", "electron.png"],
+        description: `사용하기 편하도록 Javascript Electron Desktop앱 제공`,
+        duration: "2020.7~2020.8"
+      },
+    ],
+  },
+  {
+    id: "anthena",
+    img: "/ems.webp",
+    title: "EMS",
+    company: "Novo Networks - intern",
+    descriptions: [
+      {
+        subTitle: "1. Spring AMQP 도입",
+        introduction: "EMS는 Spring기반의 server로 REST 기반으로 만들어져 있었습니다. 장비를 다루기에는 적절하지 않은 부분들이 많아, 기존 Spring code구조를 분석하여 RabbitMQ기반의 Spring AMQP code 도입 및 고도화하였습니다.",
+        iconLists: ["java.png", "spring2.ico"],
+        description: `RabbitMQ 사용 방법 정리 및 배포 \n 기존 REST기반 code를 Spring AMQP기반의 code로 변경 \n connection error 등의 문제를 자동 해결할 수 있는 wrapper 개발`,
+        duration: "2020.3~2020.6"
+      },
+      {
+        subTitle: "2. AU 시뮬레이터 개발",
+        introduction: "EMS에 AU를 3D로 시각화하여 AU의 스케줄링 및 config 데이터 설정을 하도록 요청을 받았습니다. ",
+        iconLists: ["js.png", "ts.png","react-icon.png", "threejs.png"],
+        description: `React와 javascript, typescript를 사용하여 개발을 진행 \n 3D component 구현에 대해서는 Threejs를 사용하여 개발 \n AU장비 시뮬레이터 studio 개발 \n config 스케줄링 설정 기능 개발 \n 모니터링 기능 개발(장비 온도, 각도, 방사각 등)`,
+        duration: "2020.3~2020.6"
+      },
+    ]
   },
 ]
