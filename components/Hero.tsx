@@ -26,7 +26,7 @@ const Hero = () => {
             words='Passionate in swimming new technolgies and software'
           />
           <p className='text-center md:tracking-wider mb-4 text-sm md:test-lg lg:text-2xl'>
-            Hi, I&apos;m gyu, Software Developer at Samsung Network Team!
+            Hi&lsquo; I&apos;m Gyu, Software Developer at Samsung Network Team!
           </p>
           <a href="#about">
             <MagicButton 

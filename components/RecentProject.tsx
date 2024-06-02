@@ -30,7 +30,7 @@ const RecentProject = () => {
                             <div className='flex items-center'>
                                 {iconLists.map((icon, index) => (
                                     <div key={icon} className="border border-white/[0.2] rounded-full 
-                                            bg-black lg:w-10 lg:h-10 w-8 h-8
+                                            bg-black lg:w-12 lg:h-12 w-10 h-10
                                             flex justify-center items-center"
                                             style={{transform: `translateX(-${5 * index * 2}px)`
                                         }}>
@@ -39,7 +39,7 @@ const RecentProject = () => {
                                 ))}
                             </div>
                             <div className='flex justify-center items-center'>
-                                <p className='flex lg:text-xl md:text-xs text-sm text-purple'>Check Live Site</p>
+                                <a href={link} className='flex lg:text-xl md:text-xs text-sm text-purple'>Project Detail</a>
                                 <FaLocationArrow className='ms-3' color='#CBACF9'/>
                             </div>
                         </div>

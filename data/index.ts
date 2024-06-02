@@ -75,32 +75,32 @@ export const projects = [
     title: "Near-RT RAN Intelligence Controller",
     des: "Near-RT RIC는 'Near Real Time RAN Intelligence Controller'로 기지국으로부터 대규모, 대용량 데이터를 받아 기지국을 Control하는 실시간 분산처리 kubernetest cluster 입니다. \n",
     img: "/ric.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg", "go.png"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
+    link: "#ric",
   },
   {
     id: 2,
     title: "xApp",
     des: "xApp은 RIC의 Near-RT RIC의 Application으로 Network Slice, QoS, ML model 등 고도화된 network 기능을 제공하는 고가용성 App입니다.",
     img: "/xapp.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    iconLists: ["go.png", "docker-mark-blue.png","kube.png"],
+    link: "#xapp",
   },
   {
     id: 3,
     title: "FPGA Data Management",
     des: "FDM은 DU의 FPGA register data를 관리하고 Cell의 상황에 따라 실시간으로 업데이트해주는 Linux Server입니다.",
     img: "/fdm.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    iconLists: ["linux.png","c.png","c++.png"],
+    link: "#fdm",
   },
   {
     id: 4,
     title: "Platform Engineering",
     des: "Platform 고도화 작업으로 ELK 구축, OpenTelemetry 도입, 해외연구소와 Test 자동화 협업 등을 하였습니다.",
     img: "/platform.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    iconLists: ["go.png","fluentd.png","es.png","java.png","opentelemetry.png"],
+    link: "#platform",
   },
 ];
 
@@ -218,7 +218,7 @@ export const socialMedia = [
 
 export const projectDetailList = [
   {
-    id: 1,
+    id: "ric",
     img: "/near-rt-ric.webp",
     title: "Near-RT RIC Project",
     introduction: "",
@@ -226,6 +226,7 @@ export const projectDetailList = [
       {
         subTitle: "1. Kubernetes cluster resource 유지, 보수",
         introduction: "Near-RT RIC cluster관리를 위한 helm chart, shell script 추가 및 수정이 필요 ",
+        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
         description: `xApp build shell script 작성 \n
           helm chart, value 수정 및 추가 \n
           각종 OS에서 발생하는 kubernetes error 보완 및 수정 \n`, 
@@ -233,17 +234,20 @@ export const projectDetailList = [
       {
         subTitle: "2. Near-RT RIC cluster pod 유지보수",
         introduction: "Near-RT RIC는 대규모 데이터 처리를 위한 분산 처리시스템으로, 여러 개의 component들을 통해서 event driven하게 실시간 data를 처리",
+        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
         description: "golang으로 이루어진 Near-RT RIC cluster주요 pod 디버깅 및 기능 개발(appmgr, submgr, e2mgr, rtmgr)", 
       },
       {
         subTitle: "3. cluster 고도화를 위한 APIPorxy, ricctl 개발",
         introduction: "",
+        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
         description: `- python의 fastapi 기반의 APIProxy는 cluster내부의 API 호출 및 디버깅, reconcilate기능 제공(kubernetes-api-server와 유사) \n
         - ricctl은 golang기반으로 만들어진 cli로 cluster내의 api호출, 디버깅을 위한 기능을 제공 (kubectl과 유사)`, 
       },
       {
         subTitle: "4. Kong Ingress Controller",
         introduction: "",
+        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
         description: `외부로 traffic을 흘려보내는 kong ingress controller 유지, 보수 \n
           platform 고도화를 위한 OAuth2 plugin, http2, IPv6도입 \n
           EKS형상에서의 IPv6 Opensource bug fix 및 golang custom `, 
@@ -251,6 +255,7 @@ export const projectDetailList = [
       {
         subTitle: "5. logging platform 고도화를 위한 EFK(Elasticsearch + Fluentd + Kibana) 도입",
         introduction: "Near-RT RIC는 대규모 데이터 처리를 위한 분산 처리시스템으로, 여러 개의 component들을 통해서 event driven하게 실시간 data를 처리",
+        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
         description: `logging 관리를 위한 EFK 스터디 자료 준비 및 도입 \n
           fluented를 통한 각 pod의 비표준 log, data formatting, filltering 구현 \n
           data retention policy 도입 \n
@@ -260,13 +265,14 @@ export const projectDetailList = [
     duration: "2022.12~2024.5"
   },
   {
-    id: 2,
+    id: "a1m",
     img: "/a1.webp",
     title: "A1 mediator",
     descriptions: [
       {
         subTitle: "1. A1Mediator 개발 및 유지 보수",
         introduction: "python flask기반의 server로 Near-RT RIC cluster에서 pod로 deploy되며, Non-RT RIC의 policy와 xApp사이의 policy 정합성을 관리해주는 server",
+        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
         description: `Opensource기반 A1Mediator project 인수인계 \n
           A1 interface feature에 맞게 code 수정 \n
           A1Mediator에 RMR(socket 통신 모듈) 연동 및 A1Mediator와의 RMR통신을 위한 xApp framework A1mediator 통신 부분 구현 \n
@@ -276,6 +282,7 @@ export const projectDetailList = [
       {
         subTitle: "2. A1Migration 개발",
         introduction: "A1Mediator 관리 및 spec에는 없는 추가 기능 구현을 위한 별도의 pod",
+        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
         description: `A1Mediator 관리 및 spec에는 없는 추가 기능 구현을 위한 별도의 pod \n
         python thread기반으로 A1mediator의 초기 policy 정보 update 및 policy 통계 정보 생성 기능 개발 \n
         policy 통계 정보를 EMS server로 제공하는 기능 개발`, 
@@ -284,13 +291,14 @@ export const projectDetailList = [
     duration: "2022.12~2024.5"
   },
   {
-    id: 3,
+    id: "xapp",
     img: "/xapp1.webp",
     title: "xApp",
     descriptions: [
       {
         subTitle: "1. golang기반의 e2node-config xApp개발",
         introduction: "F1AP spec을 따르는 msg를 받고, 파싱하여 slice xApp에 필요한 data를 전달해줄 수 있는 xApp이 필요",
+        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
         description: `f1ap spec 구현 및 원하는 data extract할 수 있는 기능 개발 \n
           RMR(socket)기반의 통신과 redis기반의 통신 및 data처리 기능 개발 \n
           test code coverage 100% 및 e2e test를 위한 e2sim 연동 \n
@@ -299,6 +307,7 @@ export const projectDetailList = [
       {
         subTitle: "2. golang 기반의 xApp-benchmarker 개발",
         introduction: "xApp은 현장에서 대용량, 대규모 데이터를 실시간(1ms 이하) 처리해야하므로 성능 테스트가 중요",
+        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
         description: `초당 몇 건의 msg와 정해진 기간동안 받은 msg용량의 총합, msg parsing에 걸린 시간 등에 대한 통계 제공 \n
           redis stream을 통한 실시간 모니터링 data 제공`,
       },
@@ -306,13 +315,14 @@ export const projectDetailList = [
     duration: "2022.12~2024.5"
   },
   {
-    id: 4,
+    id: "fdm",
     img: "/fdm.webp",
     title: "FDM",
     descriptions: [
       {
         subTitle: "1. FPGA Controller",
         introduction: "linux c/c++기반의 임베디드 server로 FPGA register data를 동적으로 관리해줍니다. 또한, 전체 System board의 초기 생명주기를 관리하여 init단계에 필요한 config를 LTE,NR에 따라 적절하게 설정해주는 process입니다.",
+        iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
         description: `사업자의 요청에 따른 초기 FPGA data 설정 \n
           운용자의 실시간 config값 변경에 따른 cell정보 yang database 업데이트 기능 개발 \n
           부서 간 협의를 통해 socket 통신으로 event-driven programming 구현 \n
