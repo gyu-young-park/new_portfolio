@@ -18,19 +18,25 @@ export function Button({
   borderClassName,
   duration,
   className,
+  link,
   ...otherProps
 }: {
   borderRadius?: string;
   children: React.ReactNode;
   as?: any;
+  link?: string;
   containerClassName?: string;
   borderClassName?: string;
   duration?: number;
   className?: string;
   [key: string]: any;
 }) {
+  const onClick = () => {
+    window.open(link, '_blank');
+  }
   return (
     <Component
+      onClick={onClick}
       className={cn(
         "bg-transparent relative text-xl p-[1px] overflow-hidden md:col-span-2",
         containerClassName

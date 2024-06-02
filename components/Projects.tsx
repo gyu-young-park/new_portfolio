@@ -48,18 +48,18 @@ export function Projects() {
                       ))}
                     </div>
                   }
-                  <div className="flex flex-row justify-between items-center">
-                <div className="h-fit rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-sl font-bold dark:bg-zinc-800">
+              <div className="flex sm:flex-row flex-col sm:justify-between sm:items-center items-start">
+                <div className="h-fit rounded-full sm:pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-sl font-bold dark:bg-zinc-800">
                   <span>Duration </span>
-                  <span className="bg-zinc-700 rounded-full text-[0.9rem] px-2 py-0 text-white">
+                  <span className="bg-zinc-700 rounded-full  px-2 py-0 text-white">
                     {projectDetail.duration}
                   </span>
                 </div>
-                <div className="flex items-center justify-center mt-7 mb-3">
+                <div className="flex items-center justify-center sm:mt-7 sm:mb-3">
                       <div className='flex items-center'>
                           {descriptions.iconLists.map((icon, index) => (
                               <div key={index} className="border border-white/[0.2] rounded-full 
-                                      bg-black lg:w-10 lg:h-10 w-8 h-8
+                                      bg-black lg:w-10 lg:h-10 w-10 h-10
                                       flex justify-center items-center"
                                       style={{transform: `translateX(-${5 * index * 2}px)`
                                   }}>
