@@ -37,13 +37,17 @@ export default function Approach() {
             />
             </Card>
             <Card 
-                title="Tech Stack" 
+                title="Recent Tech stack" 
                 icon={<AceternityIcon order="Tech" />}
-                description={`[참고] 매우 능숙함: ** , 능숙함: * \n [프로그래밍 언어] **Golang, *Python, C/C++, Java \n [프론트엔드] *JavaScript, *TypeScript, *React, Nextjs \n [백엔드] **Golang, *FastAPI, Flask, *Spring, Nodejs 
-                          \n [모바일] Android(Java) \n [DB] PostgreSQL, Redis 
+                description={`[참고] 매우 능숙함: ** , 능숙함: * 
+                          \n [프로그래밍 언어] **Golang, *Python, C/C++, Java 
+                          \n [프론트엔드] *JavaScript, *TypeScript, *React, Nextjs 
+                          \n [백엔드] **Golang, *FastAPI, *Spring, Flask, Nodejs 
+                          \n [모바일] Android(Java) 
+                          \n [DB] PostgreSQL, Redis 
                           \n [클라우드] Docker, *Kubernetes, Helm, AWS 
                           \n [Platform]Linux, Shell, *EFK, OpenTelemetry, eBPF
-                          \n [AI/ML] *Pytorch, Tensorflow2.0 (Especially GAN)
+                          \n [AI/ML] Tensorflow2.0 (Especially GAN)
                           \n [Data] Pandas
                           \n [커뮤니케이션] 영어`}
             >

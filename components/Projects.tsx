@@ -28,13 +28,17 @@ export function Projects() {
                 className='text-center text-[40px] md:text-5xl lg:text-6xl' 
                 words={projectDetail.title}
               />
+              <TextGenerateEffect
+                className='text-center text-[20px] md:text-xl lg:text-xl' 
+                words={projectDetail.company}
+              />
 
               {projectDetail.descriptions.map((descriptions, i) => (
                 <div className="flex flex-col gap-3 p-5" key={i}>
-                  <p className="text-lg text-neutral-300 dark:text-neutral-300">
+                  <p className="text-lg text-neutral-100 dark:text-neutral-100">
                     {descriptions.subTitle}
                   </p>
-                  <p className=" text-xm text-neutral-500 dark:text-neutral-330">
+                  <p className=" text-xm text-neutral-200 dark:text-neutral-200">
                     → {descriptions.introduction}
                   </p>
                   
@@ -42,7 +46,7 @@ export function Projects() {
                     <div className="ml-3">
                       {descriptions.description.split('\n').map((line, j) => (
                         <p
-                        className="mb-0.5 text-xm text-neutral-600 dark:text-neutral-400" 
+                        className="mb-0.5 text-xm text-neutral-400 dark:text-neutral-400" 
                           key={j}> {line.trim() !== "" ? '◦' : ""} {line}
                         </p>
                       ))}
