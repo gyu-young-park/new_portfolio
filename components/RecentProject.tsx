@@ -12,7 +12,7 @@ const RecentProject = () => {
         </h1>
         <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-16 mt-10'>
             {projects.map(({id, title, des, img, iconLists, link}) => (
-                <div key={id} className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]">
+                <div key={id} className="sm:h-[600px] h-[450px] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]">
                     <PinContainer title={title} href={link} >
                         <div className='relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10'>
                             <div className='relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]'>
@@ -30,7 +30,7 @@ const RecentProject = () => {
                             <div className="flex">
                                 {iconLists.map((icon, index) => (
                                     <div key={icon} className="border border-white/[0.2] rounded-full 
-                                            bg-black sm:w-12 sm:h-12 w-8 h-10
+                                            bg-black sm:w-12 sm:h-12 w-[2rem] h-10
                                             flex justify-center items-center"
                                             style={{transform: `translateX(-${5 * index * 2}px)`
                                         }}>

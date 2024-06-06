@@ -27,8 +27,19 @@ export const PinContainer = ({
     setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
   };
 
+  const onClickHref = (event: React.MouseEvent) => {
+    event.preventDefault();
+    if (href !== undefined) {
+      const element = document.getElementById(href)
+      if (element !== null) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
+
   return (
     <div
+      onClick={onClickHref}
       className={cn(
         "relative group/pin z-50  cursor-pointer",
         containerClassName
@@ -36,6 +47,7 @@ export const PinContainer = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
+      <a href={href}/>
       <div
         style={{
           perspective: "1000px",

@@ -73,10 +73,10 @@ export const projects = [
   {
     id: 1,
     title: "Near-RT RAN Intelligence Controller",
-    des: "Near-RT RIC는 'Near Real Time RAN Intelligence Controller'로 기지국으로부터 대규모, 대용량 데이터를 받아 기지국을 Control하는 실시간 분산처리 kubernetest cluster 입니다. \n",
+    des: "Near-RT RIC는 'Near Real Time RAN Intelligence Controller'로 기지국으로부터 대규모, 대용량 데이터를 받아 기지국을 Control하는 실시간 분산처리 kubernetest기반 cluster 입니다. \n",
     img: "/ric.svg",
     iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
-    link: "#ric",
+    link: "ric",
   },
   {
     id: 2,
@@ -84,7 +84,7 @@ export const projects = [
     des: "xApp은 RIC의 Near-RT RIC의 Application으로 Network Slice, QoS, ML model 등 고도화된 network 기능을 제공하는 고가용성 App입니다.",
     img: "/xapp.svg",
     iconLists: ["go.png", "docker-mark-blue.png","kube.png"],
-    link: "#xapp",
+    link: "xapp",
   },
   {
     id: 3,
@@ -92,7 +92,7 @@ export const projects = [
     des: "FDM은 DU의 FPGA register data를 관리하고 Cell의 상황에 따라 실시간으로 업데이트해주는 Linux Server입니다.",
     img: "/fdm.svg",
     iconLists: ["linux.png","c.png","c++.png"],
-    link: "#fdm",
+    link: "fdm",
   },
   {
     id: 4,
@@ -100,7 +100,7 @@ export const projects = [
     des: "Platform 고도화 작업으로 EFK 구축, OpenTelemetry 도입, 해외연구소와 Test 자동화 협업 등을 하였습니다.",
     img: "/platform.svg",
     iconLists: ["go.png","fluentd.png","es.png","java.png","opentelemetry.png"],
-    link: "#platform",
+    link: "platform",
   },
 ];
 
@@ -272,7 +272,7 @@ export const projectDetailList = [
         subTitle: "1. Kubernetes cluster resource 유지, 보수",
         introduction: "kubernetes 환경에서 배포되는 Near-RT RIC cluster 관리를 위한 helm chart, shell script 추가 및 수정이 필요했습니다.",
         iconLists: ["linux.png","docker-mark-blue.png", "kube.png", "helm.svg"],
-        description: `On-Promise환경에 배포되는 Near-RT RIC cluster를 위한 deploy script, debug script 등 개발 \n
+        description: `On-Premise환경에 배포되는 Near-RT RIC cluster를 위한 deploy script, debug script 등 개발 \n
           kubernetes resource, helm chart 수정 및 추가 \n
           각종 OS(OCP, WRCP, linux)에서 발생하는 kubernetes error 보완 및 수정 \n`,
           duration: "2022.7~2024.6"
@@ -287,7 +287,7 @@ export const projectDetailList = [
       },
       {
         subTitle: "3. cluster 고도화를 위한 APIPorxy, ricctl 개발",
-        introduction: "사업자의 On-Promise환경에서 배포되는 Near-RT RIC cluster를 운용자가 쉽게 제어하고 동작할 수 있도록 main controller server가 필요했습니다.",
+        introduction: "사업자의 On-Premise환경에서 배포되는 Near-RT RIC cluster를 운용자가 쉽게 제어하고 동작할 수 있도록 main controller server가 필요했습니다.",
         iconLists: ["go.png", "py.png","docker-mark-blue.png", "kube.png", "redis2.png"],
         description: `python Fastapi로 APIProxy server를 개발하여 Near-RT RIC cluster에 대한 REST API 제공 (kubernetes-api-server와 유사) \n
                       APIproxy server를 통해 cluster pod들에 필요한 동적 config 설정 등 reconciliation 기능 제공\n
@@ -363,7 +363,7 @@ export const projectDetailList = [
     descriptions: [
       {
         subTitle: "1. Kong Ingress Controller",
-        introduction: "On-Promise 환경에서 배포되는 Near-RT RIC cluster의 단일 traffic point로 HTTP2, IPv6, mTLS 등의 기능을 제공하기 위하여 도입하였습니다.",
+        introduction: "On-Premise 환경에서 배포되는 Near-RT RIC cluster의 단일 traffic point로 HTTP2, IPv6, mTLS 등의 기능을 제공하기 위하여 도입하였습니다.",
         iconLists: ["go.png", "kube.png"],
         description: `외부로 traffic을 흘려보내는 kong ingress controller 유지, 보수 \n
           platform 고도화를 위한 OAuth2 plugin, http2, IPv6, mTLS 도입 \n
