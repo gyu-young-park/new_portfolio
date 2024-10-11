@@ -14,7 +14,10 @@ export default function Approach() {
             <Card 
                 title="Career" 
                 icon={<AceternityIcon order="Career"/>}
-                description={`[2017~2021] 한국항공대 소프트웨어학과 졸업(4.24 수석) \n [2020] 노보네트웍스 SW인턴 \n [2020] 삼성전자 네트워크 사업부 SW 인턴 \n [2021~현재] 삼성전자 네트워크 사업부 SW Engineer` }    
+                description={`[2017~2021] 한국항공대 소프트웨어학과 졸업(4.24 수석) 
+                          \n [2020] 노보네트웍스 SW인턴 
+                          \n [2020] 삼성전자 네트워크 사업부 SW 인턴 
+                          \n [2021~현재] 삼성전자 네트워크 사업부 SW Engineer` }    
             >
             <CanvasRevealEffect
                 animationSpeed={5.1}
@@ -24,7 +27,17 @@ export default function Approach() {
             <Card 
                 title="Awards and Ceritificate" 
                 icon={<AceternityIcon order="Awards and Ceritificate"/>}
-                description={`[2017]국가 이공계 우수장학생 \n [2019]교내 4차 산업 SW경시 대회 금상 \n [2019] 경인 지역 알고리즘 대회 본선 진출 \n [2019] 교내 SW개발 대회 금상 \n [2020] 교내 SW개발 대회 금상 \n [2020~2021] 구글 머신러닝 부트캠프 수료 \n [2021] Tensorflow Certificate 취득 \n [2021] 캡스톤 대회 1등 \n [2021] 한화생명 블록체인 해커톤 최종 본선 진출`}
+                description={`[2017]국가 이공계 우수장학생 
+                            \n [2019]교내 4차 산업 SW경시 대회 금상 
+                            \n [2019] 경인 지역 알고리즘 대회 본선 진출 
+                            \n [2019] 교내 SW개발 대회 1등 
+                            \n [2020] 교내 SW개발 대회 2등 
+                            \n [2020~2021] 구글 머신러닝 부트캠프 수료 
+                            \n [2021] Tensorflow Certificate 취득 
+                            \n [2021] 캡스톤 대회 1등 
+                            \n [2021] 한화생명 블록체인 해커톤 최종 본선 진출 
+                            \n [2024] CKA 취득 
+                            \n [2024] 오픈소스 컨트리뷰톤 O-RAN AIMLFW 참여 중`}
             >
             <CanvasRevealEffect
                 animationSpeed={3}
@@ -39,17 +52,11 @@ export default function Approach() {
             <Card 
                 title="Recent Tech stack" 
                 icon={<AceternityIcon order="Tech" />}
-                description={`[참고] 매우 능숙함: ** , 능숙함: * 
-                          \n [프로그래밍 언어] **Golang, *Python, C/C++, Java 
-                          \n [프론트엔드] *JavaScript, *TypeScript, *React, Nextjs 
-                          \n [백엔드] **Golang, *FastAPI, *Spring, Flask, Nodejs 
-                          \n [모바일] Android(Java) 
-                          \n [DB] PostgreSQL, Redis 
-                          \n [클라우드] Docker, *Kubernetes, Helm, AWS 
-                          \n [Platform]Linux, Shell, *EFK, OpenTelemetry, eBPF
-                          \n [AI/ML] Tensorflow2.0 (Especially GAN)
-                          \n [Data] Pandas
-                          \n [커뮤니케이션] 영어`}
+                description={`[참고] Love: ** , Like: * 
+                          \n [Language] **Golang, *Python, C/C++ 
+                          \n [Frontend] *JS/TS, *React 
+                          \n [Backend] **Golang, *FastAPI, Flask
+                          \n [Infra] *Linux, *Kubernetes, *Prometheus, Docker, EFK,`}
             >
             <CanvasRevealEffect
                 animationSpeed={3}

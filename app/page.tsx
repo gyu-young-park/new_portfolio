@@ -20,7 +20,7 @@ export default function Home() {
         <RecentProject/>
         {/* <Clients/> */}
         <Projects/>
-        <Experience/>
+        {/* <Experience/> */}
         <Approach/>
         <Footer/>
       </div>
