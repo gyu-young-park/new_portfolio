@@ -327,7 +327,7 @@ export const projectDetailList = [
       //   duration: "2024.3~2024.6"
       // },
       {
-        subTitle: "4. Golang기반의 App개발",
+        subTitle: "4. Golang기반의 xApp개발",
         introduction: "O-RAN F1AP spec을 따르는 e2nodeConfig xApp과 RIC Platform 부하 test를 위한 Benchmark xApp을 개발하였습니다.",
         iconLists: ["go.png","kube.png", "redis2.png"],
         description: `Go기반 e2nodeConfig xApp을 개발하여 O-RAN F1AP spec을 준수하는 msg 생성, 파싱 및 통신 가능 개발\n
