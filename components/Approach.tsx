@@ -53,10 +53,10 @@ export default function Approach() {
                 title="Recent Tech stack" 
                 icon={<AceternityIcon order="Tech" />}
                 description={`[참고] Love: ** , Like: * 
-                          \n [Language] **Golang, *Python, C/C++ 
-                          \n [Frontend] *JS/TS, *React 
-                          \n [Backend] **Golang, *FastAPI, Flask
-                          \n [Infra] *Linux, *Kubernetes, *Prometheus, Docker, EFK,`}
+                          \n [Language] **Golang, *Python, *Java, JS/TS, C/C++ 
+                          \n [Frontend] *React 
+                          \n [Backend] **Golang, *FastAPI, Spring, Flask
+                          \n [Infra] **Kubernetes, *Linux, *Prometheus, Docker, EFK,`}
             >
             <CanvasRevealEffect
                 animationSpeed={3}

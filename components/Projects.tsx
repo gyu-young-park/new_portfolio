@@ -16,13 +16,13 @@ export function Projects() {
         {projectDetailList.map((projectDetail) => (
           <div key={projectDetail.id} className="py-10 md:w-[800px] w-[95vw] gap-10" id={projectDetail.id}>
             <BackgroundGradient className="rounded-[22px] py-6 px-8 sm:p-10 bg-white dark:bg-zinc-900">
-              <div className="pb-1 flex flex-col items-center justity-center">
+              {/* <div className="pb-1 flex flex-col items-center justity-center">
                 <img
                   src={projectDetail.img}
                   alt="jordans"
                   className="border-2 rounded-xl border-gray-500  object-contain w-[300px] h-[300px]"
                 />
-              </div>
+              </div> */}
               
               <TextGenerateEffect
                 className='text-center text-[40px] md:text-5xl lg:text-6xl' 

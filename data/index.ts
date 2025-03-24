@@ -8,7 +8,7 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I enjoy studying and developing various software, and lately, I’ve been interested in Go, cloud, and SRE!",
+    title: "Golang enthusiast!",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "object-fill w-[100%] h-[100%] opacity-50",
@@ -72,10 +72,18 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+    title: "VoMA",
+    des: "VoMA는 VoLTE Monitoring and Analytics로 실시간으로 기지국으로부터 받은 Call log들을 통해 VoLTE KPI를 생성하고 Data 통계를 만들어주는 Java기반 App입니다. \n",
+    img: "/voma.png",
+    iconLists: ["linux.png","java.png","docker-mark-blue.png", "kube.png", ],
+    link: "voma",
+  },
+  {
+    id: 2,
     title: "Near-RT RAN Intelligence Controller",
     des: "Near-RT RIC는 'Near Real Time RAN Intelligence Controller'로 기지국으로부터 대규모, 대용량 데이터를 받아 기지국을 Control하는 실시간 분산처리 kubernetest기반 cluster 입니다. \n",
     img: "/ric.svg",
-    iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png", "helm.svg"],
+    iconLists: ["linux.png","go.png", "py.png", "c++.png","docker-mark-blue.png", "kube.png"],
     link: "ric",
   },
   // {
@@ -264,19 +272,54 @@ export const projectDetailList = [
   {
     id: "voma",
     img: "/voma.png",
-    title: "Cloud VoMA",
+    title: "VoMA",
     company: "Samsung Electronics Network Team",
     descriptions: [
       {
-        subTitle: "1. VoMA cloud transformation",
-        introduction: "Java기반의 VoMA application을 Cloud화 작업 진행 중 입니다.",
-        iconLists: ["linux.png","go.png", "docker-mark-blue.png","kube.png", "helm.svg"],
-        description: `VoMA Cloud화 Architecture 설계 참여, VoMA관련 Kubernetes manifest, Helm 작성 \n
-          모니터링을 위한 Prometheus 도입  \n
-          동적 Configuration을 위한 Golang기반의 VoMA Operator 개발, CRD 작성
-          빌드, 배포 자동화 shell script 개발\n
+        subTitle: "1. VoMA Container transformation",
+        introduction: "Container화 작업 진행 중 입니다.",
+        iconLists: ["linux.png","go.png", "docker-mark-blue.png","kube.png", "helm.svg", "redis.png"],
+        description: `VoMA Cloud화 Architecture 설계 주도, VoMA관련 Kubernetes manifest, Helm 작성 \n
+          모니터링을 위한 Prometheus, AlertManager 도입  \n
+          Network 통신 최적화를 위한 Multus CNI 도입 \n
+          Container 환경 특화 제공을 위한 Golang기반의 Kubernetes Operator 개발 \ns
+          빌드, 배포 자동화 script 개발\n
+          Container 환경 개발을 위한 Github Action과 ArgoCD 도입 \n
           `,
         duration: "2024.8~현재"
+      },
+      {
+        subTitle: "2. VoMA Code 유지 보수 및 개발",
+        introduction: "Java기반의 VoMA application 신규 기능 추가 및 리팩토링 중에 있습니다.",
+        iconLists: ["linux.png","java.png"],
+        description: `사업자에 따른 PNF 환경, VNF 환경 배포 및 운영 지원 \n
+          Java Memory 분석 및 최적화  \n
+          Architecture 변경을 통한 Hand over 기능 지원 \n
+          신규 feature 구현 및 리팩토링 진행 중 \n
+          Spring 기반의 VoMA 3rd App(AlarmManager, LifeCycleManager) 유지 보수 \n
+          해외 연구소와의 협업을 통한 Test Coverage, Robot Test 지원 중 \n
+          `,
+        duration: "2024.8~현재"
+      },
+    ],
+  },
+  {
+    id: "data_mirroring",
+    img: "/voma.png",
+    title: "Data Mirroring",
+    company: "Samsung Electronics Network Team",
+    descriptions: [
+      {
+        subTitle: "1. Data Mirroring 최적화",
+        introduction: "TCP Packet 복사 및 릴레이를 위한 Data Mirroring server 최적화 작업 진행",
+        iconLists: ["linux.png","c.png"],
+        description: `VNF 환경에서 Data Mirroring 빌드 및 테스트 script 개발  \n
+          Kernel parameter, Code 최적화를 통한 Data 전송률 500% 향상 (40,000tps -> 200,000tps) \n
+          TCP Flow Control과 Session 관리를 통한 Data 전송 안정성 확보 (30분 -> 1주일)  \n
+          Memory 최적화를 통한 Data Mirroring 안정성 확보 \n
+          빌드 및 배포 환경 운영 지원 \n
+          `,
+        duration: "2024.11~현재"
       },
     ],
   },
@@ -293,8 +336,9 @@ export const projectDetailList = [
         iconLists: ["linux.png","docker-mark-blue.png", "kube.png", "helm.svg"],
         description: `On-Premise 환경의 RIC 빌드, 배포, 테스트 자동화 script 개발 \n
           Helm chart, template 유지 보수 \n
-          MSA기반 분산처리시스템인 Near-RT RIC Platform 버그 Fix 및 기능 추가 \n
-          Go기반 component인 Rtmgr, Submgr, e2mgr, Appmgr pod에 대한 유지 보수 및 버그 Fix`,
+          Platform, xApp 최적화, 아키텍처 수정을 통한 성능 1000% 향상(10,000tps -> 100,000tps) \n
+          MSA 기반의 Near-RT RIC Platform 버그 Fix 및 기능 추가 \n
+          Go기반 component인 Rtmgr, Submgr, e2mgr, Appmgr pod에 대한 유지 보수 및 버그 Fix 담당 \n`,
           duration: "2022.7~2024.6"
       },
       {
@@ -302,8 +346,9 @@ export const projectDetailList = [
         introduction: "사업자의 On-Premise환경에서 배포되는 Near-RT RIC cluster를 운용자가 쉽게 제어하고 동작할 수 있도록 tool을 개발하였습니다.",
         iconLists: ["go.png", "py.png","docker-mark-blue.png", "kube.png", "redis2.png"],
         description: `FastAPI기반 APIProxy server를 개발하여 Near-RT RIC cluster에 대한 REST API 제공 \n
-                      APIproxy server를 통해 cluster pod들에 필요한 동적 config 설정 등 reconciliation 기능 제공\n
-                      Go cobra를 통해 ricctl CLI를 개발하여 APIProxy API호출, config 설정 자동화 기능 제공`,
+                      Role 기반의 보안을 통해 계정마다 제한된 Near-RT RIC cluster REST API 접근 제공 \n
+                      APIproxy server를 통해 cluster pod들에 필요한 동적 config 설정 등 Reconciliation 기능 제공\n
+                      Go cobra를 통해 ricctl CLI를 개발하여 APIProxy API호출, config 설정 자동화 기능 제공 \n`,
         duration: "2023.7~2023.11"
       },
       {
@@ -313,7 +358,7 @@ export const projectDetailList = [
         description: `Opensource기반 A1Mediator project 인수인계 및 버그 Fix \n
           O-RAN A1AP interface spec을 따르는 Policy관련 REST API 개발 \n
           O-RAN A1TP spec을 따르는 mTLS, OAuth2, JWT token 기능 구현 \n
-          A1 Policy Data 관리 및 통계 정보 제공을 위한 A1Migration pod 추가 개발`,
+          A1 Policy Data 관리 및 통계 정보 제공을 위한 A1Migration pod 추가 개발 \n`,
         duration: "2023.3~2024.6"
       },
       // {
@@ -330,11 +375,11 @@ export const projectDetailList = [
         subTitle: "4. Golang기반의 xApp개발",
         introduction: "O-RAN F1AP spec을 따르는 e2nodeConfig xApp과 RIC Platform 부하 test를 위한 Benchmark xApp을 개발하였습니다.",
         iconLists: ["go.png","kube.png", "redis2.png"],
-        description: `Go기반 e2nodeConfig xApp을 개발하여 O-RAN F1AP spec을 준수하는 msg 생성, 파싱 및 통신 가능 개발\n
+        description: `Go기반 e2nodeConfig xApp을 개발하여 O-RAN F1AP spec을 준수하는 msg 생성, socket 통신 개발\n
           Goroutine을 통한 F1AP msg처리 효율화 진행\n
-          해외연구소와 협업하여 e2nodeConfig xApp과 무선 장비 simulator 테스트 자동화 \n
+          해외연구소와 협업하여 e2nodeConfig xApp과 무선 장비 simulator 테스트 자동화 100% 진행 \n
           xApp들이 고도화됨에 따라 e2nodeConfig xApp 기능을 golang library로 개발하여 제공 \n
-          Go기반 Benchmarker xApp 개발하여 Near-RT RIC Platform의 성능을 평가 metrics 생성 \n
+          Go기반 Benchmarker xApp 개발하여 Near-RT RIC Platform의 성능 평가 metrics 생성 \n
           코드 품질 강화 및 개선을 위해 xApp test code coverage 100% 달성\n`,
         duration: "2022.8~2023.5"
       },
@@ -352,10 +397,11 @@ export const projectDetailList = [
         introduction: "RIC Platform과 xApp 운영에 필요한 Infra관리",
         iconLists: ["go.png", "kube.png", "linux.png", "es.png","opentelemetry.png",],
         description: `
-          Prometheus PromQL 관리, go기반 tsdb 버그 수정 기능 개발 \n
-          Kong ingress controller를 통한 OAuth2 custom plugin, http2, IPv6, mTLS 개발 및 도입  \n
+          Prometheus PromQL 관리, Ceph환경에서의 tsdb 버그 수정 기능 개발 \n
+          Kong ingress controller의 Ingress 관리 및 분석 담당 \n
+          Kong ingress controller golang custom plugin 개발을 통한 OAuth2, IPv6, mTLS 지원 
           EFK stack을 제공하여 RIC component들의 log형식 표준화 및 log 모니터링, 검색 기능 제공 \n
-          OpenTelemetry, Jaeger를 도입하여 Trace Observability 강화`,
+          OpenTelemetry, Jaeger를 도입하여 Trace Observability 강화 \n`,
         duration: "2023.5~2024.6"
       },
       // {
