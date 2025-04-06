@@ -279,11 +279,11 @@ export const projectDetailList = [
         subTitle: "1. VoMA Container transformation",
         introduction: "Container화 작업 진행 중 입니다.",
         iconLists: ["linux.png","go.png", "docker-mark-blue.png","kube.png", "helm.svg", "redis.png"],
-        description: `VoMA Cloud화 Architecture 설계 주도, VoMA관련 Kubernetes manifest, Helm 작성 \n
+        description: `VoMA Container Architecture 설계 주도, Kubernetes manifest, Helm 작성 \n
           모니터링을 위한 Prometheus, AlertManager 도입  \n
           Network 통신 최적화를 위한 Multus CNI 도입 \n
-          Container 환경 특화 제공을 위한 Golang기반의 Kubernetes Operator 개발 \ns
-          빌드, 배포 자동화 script 개발\n
+          Container 환경 특화 제공을 위한 Golang기반의 Kubernetes Operator 개발 \n
+          빌드, 배포 자동화 shell script 개발\n
           Container 환경 개발을 위한 Github Action과 ArgoCD 도입 \n
           `,
         duration: "2024.8~현재"
@@ -313,9 +313,9 @@ export const projectDetailList = [
         subTitle: "1. Data Mirroring 최적화",
         introduction: "TCP Packet 복사 및 릴레이를 위한 Data Mirroring server 최적화 작업 진행",
         iconLists: ["linux.png","c.png"],
-        description: `VNF 환경에서 Data Mirroring 빌드 및 테스트 script 개발  \n
-          Kernel parameter, Code 최적화를 통한 Data 전송률 500% 향상 (40,000tps -> 200,000tps) \n
-          TCP Flow Control과 Session 관리를 통한 Data 전송 안정성 확보 (30분 -> 1주일)  \n
+        description: `VM 환경에서의 Data Mirroring 빌드 및 테스트 script 개발  \n
+          Kernel parameter, Code 최적화를 통한 Data 전송률 500% 향상 (40,000pps -> 120,000pps) \n
+          TCP Flow Control과 Session 관리를 통한 Data 전송 안정성 확보 (20~30분 -> 1주일)  \n
           Memory 최적화를 통한 Data Mirroring 안정성 확보 \n
           빌드 및 배포 환경 운영 지원 \n
           `,
@@ -336,7 +336,6 @@ export const projectDetailList = [
         iconLists: ["linux.png","docker-mark-blue.png", "kube.png", "helm.svg"],
         description: `On-Premise 환경의 RIC 빌드, 배포, 테스트 자동화 script 개발 \n
           Helm chart, template 유지 보수 \n
-          Platform, xApp 최적화, 아키텍처 수정을 통한 성능 1000% 향상(10,000tps -> 100,000tps) \n
           MSA 기반의 Near-RT RIC Platform 버그 Fix 및 기능 추가 \n
           Go기반 component인 Rtmgr, Submgr, e2mgr, Appmgr pod에 대한 유지 보수 및 버그 Fix 담당 \n`,
           duration: "2022.7~2024.6"
@@ -375,11 +374,11 @@ export const projectDetailList = [
         subTitle: "4. Golang기반의 xApp개발",
         introduction: "O-RAN F1AP spec을 따르는 e2nodeConfig xApp과 RIC Platform 부하 test를 위한 Benchmark xApp을 개발하였습니다.",
         iconLists: ["go.png","kube.png", "redis2.png"],
-        description: `Go기반 e2nodeConfig xApp을 개발하여 O-RAN F1AP spec을 준수하는 msg 생성, socket 통신 개발\n
-          Goroutine을 통한 F1AP msg처리 효율화 진행\n
+        description: `Go 기반 F1AP msg 처리 app 서버 개발\n
+          Goroutine을 통한 F1AP msg처리 효율화 진행, 이전 처리 시간 대비 3배 개선 \n
           해외연구소와 협업하여 e2nodeConfig xApp과 무선 장비 simulator 테스트 자동화 100% 진행 \n
-          xApp들이 고도화됨에 따라 e2nodeConfig xApp 기능을 golang library로 개발하여 제공 \n
-          Go기반 Benchmarker xApp 개발하여 Near-RT RIC Platform의 성능 평가 metrics 생성 \n
+          시스템 고도화됨에 따라 해당 기능을 golang library로 개발하여 제공 \n
+          Go기반 Benchmark xApp 개발하여 Near-RT RIC Platform의 성능 평가 metrics 생성 \n
           코드 품질 강화 및 개선을 위해 xApp test code coverage 100% 달성\n`,
         duration: "2022.8~2023.5"
       },
@@ -397,7 +396,7 @@ export const projectDetailList = [
         introduction: "RIC Platform과 xApp 운영에 필요한 Infra관리",
         iconLists: ["go.png", "kube.png", "linux.png", "es.png","opentelemetry.png",],
         description: `
-          Prometheus PromQL 관리, Ceph환경에서의 tsdb 버그 수정 기능 개발 \n
+          Prometheus 관리, Ceph환경에서의 tsdb 버그 수정 기능 개발 \n
           Kong ingress controller의 Ingress 관리 및 분석 담당 \n
           Kong ingress controller golang custom plugin 개발을 통한 OAuth2, IPv6, mTLS 지원 
           EFK stack을 제공하여 RIC component들의 log형식 표준화 및 log 모니터링, 검색 기능 제공 \n
