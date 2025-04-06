@@ -292,7 +292,7 @@ export const projectDetailList = [
         subTitle: "2. VoMA Code 유지 보수 및 개발",
         introduction: "Java기반의 VoMA application 신규 기능 추가 및 리팩토링 중에 있습니다.",
         iconLists: ["linux.png","java.png"],
-        description: `사업자에 따른 PNF 환경, VNF 환경 배포 및 운영 지원 \n
+        description: `사업자에 따른 Physical Machind 환경, VM 환경 배포 및 운영 지원 \n
           Java Memory 분석 및 최적화  \n
           Architecture 변경을 통한 Hand over 기능 지원 \n
           신규 feature 구현 및 리팩토링 진행 중 \n
@@ -315,7 +315,7 @@ export const projectDetailList = [
         iconLists: ["linux.png","c.png"],
         description: `VM 환경에서의 Data Mirroring 빌드 및 테스트 script 개발  \n
           Kernel parameter, Code 최적화를 통한 Data 전송률 500% 향상 (40,000pps -> 120,000pps) \n
-          TCP Flow Control과 Session 관리를 통한 Data 전송 안정성 확보 (20~30분 -> 1주일)  \n
+          TCP Flow Control과 Session 관리를 통한 Data 전송 안정성 확보 (20~30분 -> 한 달 이상)  \n
           Memory 최적화를 통한 Data Mirroring 안정성 확보 \n
           빌드 및 배포 환경 운영 지원 \n
           `,
@@ -334,7 +334,8 @@ export const projectDetailList = [
         subTitle: "1. Near-RT RIC Platform 유지, 보수",
         introduction: "Near-RT RIC Platform application과 infra에 관한 유지 보수 작업을 하였습니다. ",
         iconLists: ["linux.png","docker-mark-blue.png", "kube.png", "helm.svg"],
-        description: `On-Premise 환경의 RIC 빌드, 배포, 테스트 자동화 script 개발 \n
+        description: `On-premise Kubernetes 설치, 운영 \n
+          RIC Platform 빌드, 배포, 테스트 자동화 script 개발 \n
           Helm chart, template 유지 보수 \n
           MSA 기반의 Near-RT RIC Platform 버그 Fix 및 기능 추가 \n
           Go기반 component인 Rtmgr, Submgr, e2mgr, Appmgr pod에 대한 유지 보수 및 버그 Fix 담당 \n`,
