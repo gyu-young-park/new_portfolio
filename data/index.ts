@@ -314,7 +314,7 @@ export const projectDetailList = [
         introduction: "TCP Packet 복사 및 릴레이를 위한 Data Mirroring server 최적화 작업 진행",
         iconLists: ["linux.png","c.png"],
         description: `VM 환경에서의 Data Mirroring 빌드 및 테스트 script 개발  \n
-          Kernel parameter, Code 최적화를 통한 Data 전송률 500% 향상 (40,000pps -> 120,000pps) \n
+          Kernel parameter, Code 최적화를 통한 Data 전송률 300% 향상 (40,000pps -> 120,000pps) \n
           TCP Flow Control과 Session 관리를 통한 Data 전송 안정성 확보 (20~30분 -> 한 달 이상)  \n
           Memory 최적화를 통한 Data Mirroring 안정성 확보 \n
           빌드 및 배포 환경 운영 지원 \n
